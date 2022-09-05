@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: #fff;
+  max-width: 100vw;
+  background-image: url(../../assets/fundo2.png);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+  max-width: 65%;
+  margin: auto;
+}
+
+.button_header {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.button_header a:visited {
+  color: inherit;
+}
+
+.button_header a + a {
+  border-left: 1px solid black;
+  padding-inline: 10px;
+}
+
+.button_header a {
+  padding-inline: 10px;
+}
+
+section {
+  padding-block: 40px;
+  max-width: 65%;
+  margin-inline: auto;
+}
+
+section h1 {
+  font-size: xx-large;
+}
+
+section p {
+  margin-block: 25px;
+  text-align: justify;
+  font-size: larger;
+}
+
+section ol {
+  margin-top: 15px;
+  text-align: justify;
+  margin-left: 5%;
+}
+
+section .obj {
+  margin-block: 40px;
+  border-top: 1px solid black;
+  padding-top: 25px;
+}
+
+section h3 {
+  text-align: center;
+  margin-block: 40px;
+  font-size: large;
+}
+
+@media only screen and (max-width: 770px) {
+  .button_header {
+    display: none;
+  }
+
+  header {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img_capa {
+    padding-inline: 5%;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  section {
+    padding-inline: 5%;
+    padding-block: 40px;
+  }
+}

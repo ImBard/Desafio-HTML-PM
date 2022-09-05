@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: #fff;
+  max-width: 100vw;
+  background-image: url(../../assets/fundo2.png);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+  max-width: 65%;
+  margin: auto;
+}
+
+.button_header {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.button_header a:visited {
+  color: inherit;
+}
+
+.button_header a + a {
+  border-left: 1px solid black;
+  padding-inline: 10px;
+}
+
+.button_header a {
+  padding-inline: 10px;
+}
+
+main {
+  max-width: 65%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+main h1 {
+  margin-bottom: 15px;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid black;
+  margin-top: 15px;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+main form label {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+input[type="submit"] {
+  width: fit-content;
+  padding: 2px;
+}
+
+main h3 {
+  text-align: center;
+  margin-block: 40px;
+  font-size: large;
+}
+
+@media only screen and (max-width: 770px) {
+  .button_header {
+    display: none;
+  }
+
+  header {
+    align-items: center;
+    justify-content: center;
+  }
+}
