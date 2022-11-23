@@ -1,15 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask
+from routes import main
+# from db import db
+
 
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:@localhost/ds4"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-@app.route("/")
-def home():
-    return render_template("index.html")
 
-@app.route("/contato")
-def cont():
-    return render_template("contato.html")
+# db.init_app(app)
+app.register_blueprint(main)
 
-@app.route("/who")
-def who():
-    return render_template("who.html")
+if __name__ == "__main__": 
+  app.run(debug=True)
